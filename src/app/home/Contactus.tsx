@@ -131,7 +131,7 @@ const Contactus = () => {
             />
           </div>
 
-          <div className={styles.formholderselectsubject}>
+          {/* <div className={styles.formholderselectsubject}>
             <label htmlFor="subject" className={styles.selectsubject}>
               Select Subject?
             </label>
@@ -161,7 +161,7 @@ const Contactus = () => {
               />
               <p className={styles.p}> Got an idea</p>
             </div>
-          </div>
+          </div> */}
 
           <div className={styles.formholdermessage}>
             <label htmlFor="message" className={styles.labelleft}>
