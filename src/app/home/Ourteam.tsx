@@ -20,6 +20,7 @@ const Ourteam = () => {
                 instalink={item.instalink}
                 twitterlink={item.twitterlink}
                 email={item.email}
+                linkedin = {item.linkedin}
                 imgsource={item.imgsource}
               />
             </div>
