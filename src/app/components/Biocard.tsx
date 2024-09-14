@@ -23,18 +23,35 @@ export default function Biocard(data: {
   instalink: string;
   twitterlink: string;
   email: string;
+  linkedin: string;
   imgsource: string;
 }) {
   return (
     <Card
       sx={{
-        width: 320,
+        width: 350,
         maxWidth: "100%",
         boxShadow: "lg",
+        background: "#CDFFFF",
+        transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+        ":hover": {
+          transform: "scale(1.15) ", 
+          boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)", 
+          background: "linear-gradient(135deg, #75b7e6, #9b59b6)", 
+          color: "black",
+          "& .MuiTypography-root": {
+            color: "white", // Change text color to white on hover
+          },
+        },
       }}
     >
       <CardContent sx={{ alignItems: "center", textAlign: "center" }}>
-        <Avatar src={data.imgsource} sx={{ "--Avatar-size": "4rem" }} />
+        <Avatar src={data.imgsource} sx={{ "--Avatar-size": "7rem", 
+        transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+          ":hover" :{
+            transform: "scale(1.125) ",
+          },
+          }} />
         <Chip
           size="sm"
           variant="soft"
@@ -44,11 +61,22 @@ export default function Biocard(data: {
             mb: 1,
             border: "3px solid",
             borderColor: "background.surface",
+            transition: "transform 0.3s ease",
+            ":hover": {
+              transform: "translateY(-5px)",
+            },
           }}
         >
           {data.role}
         </Chip>
-        <Typography level="title-lg"> {data.name} </Typography>
+        <Typography level="title-lg" sx={{
+            transition: "transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease",
+            ":hover": {
+              transform: "scale(1.1)", 
+              color: "white", 
+              textShadow: "2px 2px 4px rgba(60, 30, 30, 0.3)", 
+            },
+          }}> {data.name} </Typography>
         <Typography level="body-sm" sx={{ maxWidth: "24ch" }}>
           {data.description}
         </Typography>
@@ -117,7 +145,7 @@ export default function Biocard(data: {
             </IconButton>
           </Link>
 
-          <Link href={data.email}>
+          <Link href="mailto:{data.email}">
             <IconButton size="sm" variant="plain" color="neutral">
               <SvgIcon>
                 <svg
@@ -129,6 +157,23 @@ export default function Biocard(data: {
                   <path
                     fill="currentColor"
                     d="M19.989 11.572a7.96 7.96 0 0 0-1.573-4.351a9.757 9.757 0 0 1-.92.87a13.156 13.156 0 0 1-3.313 2.01c.167.35.32.689.455 1.009v.003c.027.061.05.118.094.229l.017.04c1.513-.17 3.109-.107 4.656.103c.206.027.4.056.584.087Zm-9.385-7.45a46.15 46.15 0 0 1 2.692 4.27c1.223-.482 2.234-1.09 3.048-1.767c.33-.274.594-.532.796-.755A7.968 7.968 0 0 0 12 4c-.476 0-.942.042-1.396.121ZM4.253 9.997a29.21 29.21 0 0 0 2.04-.123a31.53 31.53 0 0 0 4.862-.822a54.36 54.36 0 0 0-2.7-4.227a8.018 8.018 0 0 0-4.202 5.172Zm1.53 7.038a14.21 14.21 0 0 1 1.575-1.899c1.454-1.49 3.17-2.65 5.156-3.29l.062-.018c-.165-.364-.32-.689-.476-.995c-1.836.535-3.77.869-5.697 1.042c-.94.085-1.783.122-2.403.128a7.966 7.966 0 0 0 1.784 5.032Zm9.221 2.38a35.951 35.951 0 0 0-1.632-5.709c-2 .727-3.596 1.79-4.829 3.058a9.77 9.77 0 0 0-1.317 1.655A7.964 7.964 0 0 0 12 20a7.977 7.977 0 0 0 3.005-.583Zm1.874-1.075a7.998 7.998 0 0 0 2.987-4.87c-.34-.085-.771-.17-1.245-.236a12.025 12.025 0 0 0-3.18-.033a39.39 39.39 0 0 1 1.438 5.14ZM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10Z"
+                  />
+                </svg>
+              </SvgIcon>
+            </IconButton>
+          </Link>
+          <Link href={data.linkedin}>
+            <IconButton size="sm" variant="plain" color="neutral">
+              <SvgIcon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M22 0H2C.897 0 0 .897 0 2v20c0 1.103.897 2 2 2h20c1.103 0 2-.897 2-2V2c0-1.103-.897-2-2-2zM6.4 19H3.6V9.5h2.8V19zm-1.4-11.1c-.892 0-1.6-.735-1.6-1.6 0-.884.708-1.6 1.6-1.6.894 0 1.6.716 1.6 1.6 0 .865-.706 1.6-1.6 1.6zm15.6 11.1h-2.8v-5.6c0-1.34-.045-3.073-1.873-3.073-1.873 0-2.161 1.463-2.161 2.957v5.717h-2.8V9.5h2.7v1.3h.037c.376-.713 1.3-1.46 2.686-1.46 2.872 0 3.398 1.892 3.398 4.356v5.4z"
                   />
                 </svg>
               </SvgIcon>
