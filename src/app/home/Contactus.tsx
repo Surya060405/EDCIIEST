@@ -70,7 +70,7 @@ const Contactus = () => {
       <div className={styles.lower}>
         <div className={styles.left}>
           <Image
-            src="/contactus/sideimg.png"
+            src="/contactus/contact.svg"
             alt=""
             className={styles.image}
             height={500}

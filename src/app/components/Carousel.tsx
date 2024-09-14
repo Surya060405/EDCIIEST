@@ -51,7 +51,7 @@ export default function Carousel() {
         >
           <SwiperSlide className={styles.swiperslide}>
             <Image
-              src="/initative/i1.jpg"
+              src="/initative/1.svg"
               alt=""
               className={styles.img}
               height={500}
@@ -60,7 +60,7 @@ export default function Carousel() {
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
             <Image
-              src="/initative/i2.jpg"
+              src="/initative/2.svg"
               alt=""
               className={styles.img}
               height={500}
@@ -69,7 +69,7 @@ export default function Carousel() {
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
             <Image
-              src="/initative/i4.jpg"
+              src="/initative/3.svg"
               alt=""
               className={styles.img}
               height={500}
@@ -78,7 +78,7 @@ export default function Carousel() {
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
             <Image
-              src="/initative/i5.jpg"
+              src="/initative/4.svg"
               alt=""
               className={styles.img}
               height={500}
@@ -87,14 +87,14 @@ export default function Carousel() {
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
             <Image
-              src="/initative/i6.jpg"
+              src="/initative/5.svg"
               alt=""
               className={styles.img}
               height={500}
               width={500}
             />
           </SwiperSlide>
-          <SwiperSlide className={styles.swiperslide}>
+          {/* <SwiperSlide className={styles.swiperslide}>
             <Image
               src="/initative/i7.jpg"
               alt=""
@@ -102,7 +102,7 @@ export default function Carousel() {
               height={500}
               width={500}
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       )}
     </>
