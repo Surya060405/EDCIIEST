@@ -1,16 +1,16 @@
 .ourteam {
   display: flex;
   flex-direction: column;
-  padding: 5%;
+  padding: 0%;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .header {
-  color: #fff;
-  /* leading-trim: both;
-text-edge: cap; */
+  color: #ffffff;
+  /*leading-trim: both;
+  text-edge: cap;*/
   font-family: Poppins;
   font-size: 40px;
   font-style: normal;
@@ -29,11 +29,13 @@ text-edge: cap; */
   column-count: 3;
   -webkit-column-width: 33%;
   -moz-column-width: 33%;
-  column-width: 33%;
+  column-width: 30%;
 }
 
 .card {
   padding: 5%;
+  width: 90%;
+  break-inside: avoid;
 }
 
 .colortransition {
@@ -51,7 +53,7 @@ text-edge: cap; */
   min-width: 100px;
   min-height: 40px;
 
-  color: #fff7f7;
+  color: #ffffff;
   font-family: Poppins;
   font-size: 100%;
   font-style: normal;
@@ -64,7 +66,7 @@ text-edge: cap; */
   transform: scale(1.15);
 }
 
-@media (max-width: 1991px) {
+@media (max-width: 1000px) {
   .cardholder {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -82,5 +84,4 @@ text-edge: cap; */
     column-width: 100%;
   }
 }
-
 
