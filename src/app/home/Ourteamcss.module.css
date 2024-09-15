@@ -1,7 +1,7 @@
 .ourteam {
   display: flex;
   flex-direction: column;
-  padding: 0%;
+  padding: 0;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -9,13 +9,9 @@
 
 .header {
   color: #fff;
-  /* leading-trim: both;
-text-edge: cap; */
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 40px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
   width: 100%;
   margin-bottom: 5%;
   text-align: center;
@@ -24,16 +20,15 @@ text-edge: cap; */
 .cardholder {
   padding: 5%;
   width: 100%;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-width: 33%;
-  -moz-column-width: 33%;
-  column-width: 33%;
+  display: grid;
+  grid-gap: 20px; /* Adds spacing between cards */
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns for large screens */
 }
 
 .card {
   padding: 5%;
+  background: transparent; /* Optional: Add background color for clarity */
+  border-radius: 10px;
 }
 
 .colortransition {
@@ -46,16 +41,10 @@ text-edge: cap; */
   background: linear-gradient(135deg, #75b7e6, #9b59b6);
   width: 100px;
   height: 40px;
-  flex-shrink: 0;
-  min-width: 100px;
-  min-height: 40px;
-
   color: #fff7f7;
-  font-family: Poppins;
-  font-size: 100%;
-  font-style: normal;
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: normal;
   text-align: center;
 }
 
@@ -64,21 +53,22 @@ text-edge: cap; */
   transform: scale(1.15);
 }
 
-@media (max-width: 1991px) {
+/* Mobile view */
+@media (max-width: 768px) {
   .cardholder {
-    grid-template-columns: 1fr; /* Single column for small devices */
+    grid-template-columns: 1fr; /* Single column for small screens */
   }
 
   .button {
     width: 80%;
-    min-width: unset;
     height: 40px;
   }
 }
 
-@media (max-width: 768px) {
+/* Medium screens (tablets) */
+@media (min-width: 769px) and (max-width: 1200px) {
   .cardholder {
-    grid-template-columns: 1fr; /* Single column for tablets */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
   }
 
   .button {
@@ -86,16 +76,14 @@ text-edge: cap; */
   }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-  .cardholder {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for medium-sized screens */
-  }
-}
-
+/* Large desktop screens */
 @media (min-width: 1201px) {
   .cardholder {
     grid-template-columns: repeat(3, 1fr); /* Three columns for large screens */
   }
+
+  .button {
+    width: 100px;
+    height: 40px;
+  }
 }
-
-
