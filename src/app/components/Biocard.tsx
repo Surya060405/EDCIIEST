@@ -32,12 +32,12 @@ export default function Biocard(data: {
         width: 350,
         maxWidth: "100%",
         boxShadow: "lg",
-        background: "#CDFFFF",
+        background: "#FFF",
         transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
         ":hover": {
           transform: "scale(1.15) ", 
           boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)", 
-          background: "linear-gradient(135deg, #75b7e6, #9b59b6)", 
+          background: "grey", 
           color: "black",
           "& .MuiTypography-root": {
             color: "white", // Change text color to white on hover
@@ -86,6 +86,19 @@ export default function Biocard(data: {
             gap: 2,
             mt: 2,
             "& > button": { borderRadius: "2rem" },
+            "@media (max-width: 1000px)": {
+              gap: 1, 
+              justifyContent: "center", 
+            },
+            "@media (max-width: 600px)": {
+              gap: 0.2, 
+              justifyContent: "center", 
+            },
+            "@media (max-width: 400px)": {
+                flexDirection: "column", 
+                gap: 0.1, 
+                 mt: 1,
+            },
           }}
         >
           <Link href={data.facebooklink}>
