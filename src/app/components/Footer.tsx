@@ -44,7 +44,7 @@ const Footer = () => {
               width={24}
               alt="phone"
             />
-            <span>123456789</span>
+            <span>+91 98015 98891</span>
           </Link>
           <Link href="/" className={styles.link}>
             <Image
@@ -53,7 +53,7 @@ const Footer = () => {
               width={24}
               alt="email"
             />
-            <span>asc15.lko@gmail.com</span>
+            <span>Iiests.edc@gmail.com</span>
           </Link>
           <Link href="/" className={styles.link}>
             <Image
@@ -62,54 +62,52 @@ const Footer = () => {
               width={24}
               alt="email"
             />
-            <span className={styles.address}>
-              INDIAN INSTITUTE OF ENGINEERING SCIENCE AND TECHNOLGY
-            </span>
+            <text className={styles.address}>
+              IIEST SHIBPUR
+            </text>
           </Link>
         </div>
         <div className={styles.row}>
           <header className={styles.header}>Company</header>
-          <Link href="#aboutus" className={styles.link}>
-            {" "}
+          <Link href="/" className={styles.link}>
+            
             About
           </Link>
-          <Link href="/contact" className={styles.link}>
-            Contact
+          <Link href="/" className={styles.link}>
+            Gallery
           </Link>
-          <Link href="/blogs" className={styles.link}>
-            Blogs
+          <Link href="/" className={styles.link}>
+            Team
           </Link>
+          <Link href="/" className={styles.link}>
+            Initiaive
+          </Link>
+          <Link href="/" className={styles.single}>
+            Contact Us
+          </Link>
+          
         </div>
         <div className={styles.row}>
           <header className={styles.header}>Legal</header>
-          <Link href="privacypolicy" className={styles.link}>
+          <Link href="/" className={styles.link}>
             Privacy Policy
           </Link>
-          <Link href="tandc" className={styles.link}>
+          <Link href="/" className={styles.link}>
             Terms & Conditions
           </Link>
-          <Link href="termsofuse" className={styles.link}>
+          <Link href="/" className={styles.link}>
             Terms of Use
           </Link>
-          <Link href="Refund Policy" className={styles.link}>
+          <Link href="/" className={styles.link}>
             Refund Policy
           </Link>
         </div>
-        <div className={styles.row}>
-          <header className={styles.header}>Quick Links</header>
-          <Link href="/" className={styles.link}>
-            Techlabz Keybox
-          </Link>
-          <Link href="/downloads" className={styles.link}>
-            Downloads
-          </Link>
-          <Link href="/forum" className={styles.link}>
-            Forum
-          </Link>
-        </div>
+        
       </div>
     </div>
   );
 };
+
+
 
 export default Footer;
