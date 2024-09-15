@@ -12,8 +12,8 @@ const Eventcontainer = (data: {
     <div className={styles.card}>
       <Image
         src={data.src}
-        width={100}
-        height={100}
+        width={400}
+        height={300}
         alt={data.title}
         className={styles.image}
       />

@@ -57,7 +57,7 @@ line-height: 120px; /* 240% */
     line-height: normal;
 }
    
-@media(max-width:991px)
+/* @media(max-width:991px)
 {
   
 .lower{
@@ -65,7 +65,7 @@ line-height: 120px; /* 240% */
     -moz-column-count: 2;
     column-count: 2;
 }  
-}
+} */
 
 @media (max-width:600px) {
   

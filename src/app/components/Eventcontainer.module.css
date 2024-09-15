@@ -1,52 +1,77 @@
 .card {
     position: relative;
-    width: 20rem;
-    height: 30rem;
+    width: 90%;
+    max-width: 50rem; /* Limits the width on larger screens */
+    height: auto; /* Adjusts height based on content */
+    aspect-ratio: 4 / 3; /* Maintains aspect ratio */
     background-size: cover;
     background-color: black;
     border-radius: 20px;
-    background-position:  center;
+    background-position: center;
     overflow: hidden;
+    margin: 1rem auto; /* Centers the card and adds some margin */
 }
 
-/*  Assigning properties to inner
-    content of card  */
+/* Inner content of card */
 .card__inner {
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
     opacity: 0;
     padding: 2rem 1.3rem 2rem 2rem;
-    transition: all 0.4s ease 0s;
+    transition: opacity 0.4s ease;
 }
 
-/*  On hovering card opacity 
-    of content must be 1*/
+/* On hovering card, opacity of content must be 1 */
 .card:hover .card__inner {
     opacity: 1;
 }
 
-/*  General property for heading
-    and paragraph*/
+/* General properties for heading and paragraph */
 .card__inner_h2 {
     margin-top: 1rem;
 }
 
 .card__inner_p {
-    overflow-y: scroll;
-    height: 87%;
+    overflow-y: auto; /* Allows scrolling if needed */
+    height: 80%; /* Adjusts height based on card size */
     padding-right: 1rem;
     font-weight: 200;
     line-height: 2.5rem;
     margin-top: 1.5rem;
 }
 
-.image{
+/* Ensure image scales correctly */
+.image {
     width: 100%;
-    height: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        aspect-ratio: auto; 
+    }
+
+    .card__inner_p {
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card__inner {
+        padding: 1rem; /* Adjust padding for very small screens */
+    }
+
+    .card__inner_p {
+        height: 100%; /* Further adjust height for small screens */
+    }
 }
